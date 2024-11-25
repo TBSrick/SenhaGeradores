@@ -57,19 +57,10 @@ const [SavedPasswords, setSavedPasswords] = useState([]);
 
            <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate('SavedPasswords', { savedPasswords })}>
+        onPress={() => navigation.navigate('SavedPasswords', { SavedPasswords })}>
           <Text style={styles.textButton}>Senhas Salvas</Text>
         </TouchableOpacity>
-        <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate('SavedPasswords', { savedPasswords })}>
-          <Text style={styles.textButton}>Senhas Salvas</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate('SavedPasswords', { savedPasswords })}>
-          <Text style={styles.textButton}>Senhas Salvas</Text>
-        </TouchableOpacity>
+      
  
 
     </View>
@@ -81,7 +72,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="SavedPasswords" component={savedPasswords} />
+        <Stack.Screen name="SavedPasswords" component={SavedPasswords} />
       </Stack.Navigator>
     </NavigationContainer>
   )
